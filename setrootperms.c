@@ -172,7 +172,7 @@ static int __init run_init(void) {
 
     // Set the actual syscalls to the "original" linked versions
 #if LINUX_VERSION_CODE > KERNEL_VERSION(4, 16, 0)
-    original_kill = (t_syscall)__sys_call_table[__NR_kill];
+    original_kill = (original_kill)__sys_call_table[__NR_kill];
 #else
     original_kill = (void*)__sys_call_table[__NR_kill];
 #endif
