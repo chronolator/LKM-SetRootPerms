@@ -64,10 +64,9 @@ id
 ```
 
 ## References
-https://github.com/m0nad/Diamorphine
-https://github.com/xcellerator/linux_kernel_hacking/blob/master/3_RootkitTechniques/3.3_set_root/rootkit.c
-https://xcellerator.github.io/posts/linux_rootkits_02/
-https://xcellerator.github.io/posts/linux_rootkits_03/
-https://jm33.me/we-can-no-longer-easily-disable-cr0-wp-write-protection.html
-https://github.com/maK-/Syscall-table-hijack-LKM
-https://github.com/torvalds/linux/blob/b07175dc41babfec057f494d22a750af755297d8/include/linux/syscalls.h
+Diamorphine: https://github.com/m0nad/Diamorphine  
+Xcellerator code: https://github.com/xcellerator/linux_kernel_hacking/blob/master/3_RootkitTechniques/3.3_set_root/rootkit.c  
+Xcellerator Blog: https://xcellerator.github.io/posts/linux_rootkits_02/  
+Xcellerator Blog: https://xcellerator.github.io/posts/linux_rootkits_03/  
+Jm33 Blog: https://jm33.me/we-can-no-longer-easily-disable-cr0-wp-write-protection.html  
+MaK- Blog: https://github.com/maK-/Syscall-table-hijack-LKM  
