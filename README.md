@@ -4,7 +4,6 @@ Linux Kernel Module (LKM) example of commiting new creds using a hijacked kill s
 
 ## Dependencies
 Ensure kernel headers, kernel dev packagesm and gcc is installed before building.  
-For the clients ensure system has either python3 or nping installed.  
 
 Deb-based Systems:  
 ```
