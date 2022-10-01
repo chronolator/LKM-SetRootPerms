@@ -18,12 +18,12 @@ yum install kernel kernel-devel kernel-headers gcc -y
 ## Install
 Clone repository:  
 ```
-git clone https://github.com/chronolator/LKM-SetRootPerms.git
+git clone https://github.com/chronolator/LKM-UserModeHelper.git
 ```
 
 Enter folder:  
 ```
-cd LKM-SetRootPerms
+cd LKM-UserModeHelper
 ```
 
 Build the module:  
@@ -38,10 +38,10 @@ dmesg --clear
 
 Load the module as root:  
 ```
-insmod ./setrootperms.ko
+insmod ./usermodehelper.ko
 ```
 
-To view the SetRootPerms output:  
+To view the UserModeHelper output:  
 ```
 dmesg -T --color
 ```
@@ -49,24 +49,10 @@ dmesg -T --color
 ## Uninstall
 Unload the module as root:  
 ```
-rmmod setrootperms
-```
-
-## Usage
-Escalate privileges to root
-```
-kill -64 0
-```
-
-Verify
-```
-id
+rmmod usermodehelper
 ```
 
 ## References
-Diamorphine: https://github.com/m0nad/Diamorphine  
-Xcellerator code: https://github.com/xcellerator/linux_kernel_hacking/blob/master/3_RootkitTechniques/3.3_set_root/rootkit.c  
-Xcellerator Blog: https://xcellerator.github.io/posts/linux_rootkits_02/  
-Xcellerator Blog: https://xcellerator.github.io/posts/linux_rootkits_03/  
-Jm33 Blog: https://jm33.me/we-can-no-longer-easily-disable-cr0-wp-write-protection.html  
-MaK- Blog: https://github.com/maK-/Syscall-table-hijack-LKM  
+Execute shell command in kernel module: https://stackoverflow.com/a/11215691  
+Invoking user-space applications from the kernel: https://developer.ibm.com/articles/l-user-space-apps/
+Kernel.org call_usermodehelper: https://www.kernel.org/doc/htmldocs/kernel-api/API-call-usermodehelper.html
