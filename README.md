@@ -1,6 +1,6 @@
 # LKM-SetRootPerms
 Kernel Version: 2.6.x / 3.x / 4.x / 5.x  
-Linux Kernel Module (LKM) example of commiting new creds using a hijacked kill syscall.
+Linux Kernel Module (LKM) example of committing new creds using a hijacked kill syscall.
 
 ## Dependencies
 Ensure kernel headers, kernel dev packagesm and gcc is installed before building.  
